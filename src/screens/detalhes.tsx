@@ -25,7 +25,7 @@ const Detalhes = ({route}:any) => {
                
                 <Text style={{paddingVertical:7,paddingHorizontal:5,fontSize:17}}>CPF: {user.cpf ? user.cpf : "N/A"}</Text>
                 <Divider style={{backgroundColor:'red',borderWidth:.7,width:'100%'}} />
-                <Text style={{textTransform:'capitalize',paddingVertical:5,paddingHorizontal:5,fontSize:17}} >Data Nascimento:  {user.data_nascimento ? user.data_nascimento : "N/A"}</Text>
+                <Text style={{textTransform:'capitalize',paddingVertical:5,paddingHorizontal:5,fontSize:17}} >Data Nascimento:  {user.data_nascimento ? user.data_nascimento.split("-").reverse().join("/") : "N/A"}</Text>
                 <Divider style={{backgroundColor:'red',borderWidth:.7,width:'100%'}} />
                 <Text style={{textTransform:'capitalize',paddingVertical:5,paddingHorizontal:5,fontSize:17}} >Genero: {user.genero ? user.genero : "N/A"}</Text>
                 <Divider style={{backgroundColor:'red',borderWidth:.7,width:'100%'}} />
@@ -43,7 +43,7 @@ const Detalhes = ({route}:any) => {
                 <Divider style={{backgroundColor:'red',borderWidth:.7,width:'100%'}} />
                 <Text style={{textTransform:'capitalize',paddingVertical:5,paddingHorizontal:5,fontSize:17}} >Residente: {user.residente_em ? user.residente_em : "N/A"}</Text>
                 <Divider style={{backgroundColor:'red',borderWidth:.7,width:'100%'}} />
-                <Text style={{textTransform:'capitalize',paddingVertical:5,paddingHorizontal:5,fontSize:17}} >Data Desaparecimento: {user.data_desaparecimento ? user.data_desaparecimento : "N/A"}</Text>
+                <Text style={{textTransform:'capitalize',paddingVertical:5,paddingHorizontal:5,fontSize:17}} >Data Desaparecimento: {user.data_desaparecimento ? user.data_desaparecimento.split("-").reverse().join("/") : "N/A"}</Text>
                 <Divider style={{backgroundColor:'red',borderWidth:.7,width:'100%'}} />
                 <Text style={{textTransform:'capitalize',paddingVertical:5,paddingHorizontal:5,fontSize:17}} >Local Desaparecimento: {user.local_desaparecimento ? user.local_desaparecimento : "N/A"}</Text>
                 <Divider style={{backgroundColor:'red',borderWidth:.7,width:'100%'}} />

@@ -85,12 +85,12 @@ const Home = () => {
              
             <View style={{width:350}}>
              
-              <Text style={{padding:8,fontSize:20}}>Nascimento:{" "}{item.data_nascimento ? item.data_nascimento : "N/A"} </Text>
+              <Text style={{padding:8,fontSize:20}}>Nascimento:{" "}{item.data_nascimento ? item.data_nascimento.split("-").reverse().join("/") : "N/A"} </Text>
               <Divider style={{backgroundColor:'red',borderWidth:.7,width:'100%'}} />
 
               <Text style={{textTransform:'capitalize',padding:8,fontSize:20}}>
                 Data Desaparecimento:{" "}
-                {item.data_desaparecimento ? item.data_desaparecimento : "N/A"}
+                {item.data_desaparecimento ? item.data_desaparecimento.split("-").reverse().join("/") : "N/A"}
               </Text>
               <Divider style={{backgroundColor:'red',borderWidth:.7,width:'100%'}} />
               
